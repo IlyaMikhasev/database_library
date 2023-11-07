@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menustrip_chooseBD = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menustrip_CreateTable = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dGrid_author = new System.Windows.Forms.DataGridView();
             this.b_update = new System.Windows.Forms.Button();
             this.dGrid_books = new System.Windows.Forms.DataGridView();
@@ -52,11 +52,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1004, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.CheckFileExists = false;
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // файлToolStripMenuItem
             // 
@@ -84,9 +79,14 @@
             // menustrip_CreateTable
             // 
             this.menustrip_CreateTable.Name = "menustrip_CreateTable";
-            this.menustrip_CreateTable.Size = new System.Drawing.Size(180, 22);
+            this.menustrip_CreateTable.Size = new System.Drawing.Size(168, 22);
             this.menustrip_CreateTable.Text = "Создать таблицы";
             this.menustrip_CreateTable.Click += new System.EventHandler(this.menustrip_CreateTable_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.CheckFileExists = false;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // dGrid_author
             // 
@@ -95,6 +95,7 @@
             this.dGrid_author.Name = "dGrid_author";
             this.dGrid_author.Size = new System.Drawing.Size(376, 563);
             this.dGrid_author.TabIndex = 1;
+            this.dGrid_author.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dGrid_author_CellMouseDoubleClick);
             // 
             // b_update
             // 
