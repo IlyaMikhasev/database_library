@@ -37,6 +37,10 @@
             this.dGrid_author = new System.Windows.Forms.DataGridView();
             this.b_update = new System.Windows.Forms.Button();
             this.dGrid_books = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.famaly = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGrid_author)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGrid_books)).BeginInit();
@@ -110,10 +114,42 @@
             // dGrid_books
             // 
             this.dGrid_books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGrid_books.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.famaly,
+            this.name,
+            this.desc});
             this.dGrid_books.Location = new System.Drawing.Point(395, 27);
             this.dGrid_books.Name = "dGrid_books";
             this.dGrid_books.Size = new System.Drawing.Size(489, 563);
             this.dGrid_books.TabIndex = 3;
+            this.dGrid_books.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGrid_books_CellContentClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // famaly
+            // 
+            this.famaly.DataPropertyName = "id_author";
+            this.famaly.HeaderText = "Фио";
+            this.famaly.Name = "famaly";
+            this.famaly.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.famaly.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Название";
+            this.name.Name = "name";
+            // 
+            // desc
+            // 
+            this.desc.HeaderText = "примечание";
+            this.desc.Name = "desc";
             // 
             // Form1
             // 
@@ -147,6 +183,10 @@
         private System.Windows.Forms.DataGridView dGrid_author;
         private System.Windows.Forms.Button b_update;
         private System.Windows.Forms.DataGridView dGrid_books;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewComboBoxColumn famaly;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn desc;
     }
 }
 
